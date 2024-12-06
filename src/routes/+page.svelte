@@ -8,15 +8,16 @@
 	let ShortUrlLink = $state(null);
 	let isVisible = $state(false);
 	const API_KEY = import.meta.env.VITE_API_KEY;
+
 	let longUrlLink;
 
 	const handleUrl = async (e) => {
 		e.preventDefault();
 		isVisible = true;
 		if (!msg) {
-			longUrlLink = `https://happy-wishes-yevie3ugk-ryans-projects-6554e89e.vercel.app/Merry/${name}/false`;
+			longUrlLink = `https://happy-wishes-i4vn.vercel.app/Merry/${name}/false`;
 		} else {
-			longUrlLink = `https://happy-wishes-yevie3ugk-ryans-projects-6554e89e.vercel.app/Merry/${name}/${msg}`;
+			longUrlLink = `https://happy-wishes-i4vn.vercel.app/Merry/${name}/${msg}`;
 		}
 
 		try {

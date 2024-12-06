@@ -8,6 +8,8 @@
 	let ShortUrlLink = $state(null);
 	let isVisible = $state(false);
 	const API_KEY = import.meta.env.VITE_API_KEY;
+	import './app.css';
+	import Footer from './Footer.svelte';
 
 	let longUrlLink;
 
@@ -52,10 +54,16 @@
 </script>
 
 <main class="container-fluid" id="top">
-	<h1 class="text-center">Happy Wishes Generator</h1>
+	<h1 class="text-center kablammo-font">Happy Wishes Generator.</h1>
 	<br />
-	<div class="card" id="christmas">
-		<h2 class="text-center">Christmas</h2>
+	<div
+		class="card"
+		id="christmas"
+		style="background: #222428;border:1px solid whitesmoke;color:whitesmoke;"
+	>
+		<h2 class="text-center">
+			Christmas <i class="fa-solid fa-gift fa-lg" style="color: teal;"></i>
+		</h2>
 		<hr />
 		{#if isVisible}
 			<div id="loader" style="position:absolute;top:50%;left:50%;">
@@ -395,12 +403,52 @@
 			</div>
 		{/if}
 	</div>
+	<br />
+	<div style="display:flex;justify-content:center;align-items:center;">
+		<div style="display: inline-block;margin:auto;">
+			<Footer />
+		</div>
+	</div>
 </main>
 
 <style>
+	label {
+		color: aliceblue;
+	}
+	.kablammo-font {
+		font-family: 'Kablammo', system-ui;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: 'MORF' 0;
+		background: -webkit-linear-gradient(45deg, yellow, rgb(179, 179, 22), teal, gold, #333);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 	#content-div form {
 		display: block;
 		place-content: center;
+		background: #222428;
+	}
+	#content-div {
+		background-color: #222428;
+	}
+
+	form input,
+	textarea {
+		background-color: #222428;
+		color: whitesmoke;
+	}
+	hr {
+		height: 2px;
+		background-color: aliceblue;
+	}
+
+	form input:focus,
+	textarea:focus {
+		background-color: #222428;
+		color: aliceblue;
+		border: 2px solid rebeccapurple;
 	}
 	.sparkle-button {
 		--active: 0;

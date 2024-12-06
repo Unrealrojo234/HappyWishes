@@ -14,9 +14,9 @@
 		e.preventDefault();
 		isVisible = true;
 		if (!msg) {
-			longUrlLink = `http:localhost:5173/Merry/${name}/false`;
+			longUrlLink = `https://happy-wishes-yevie3ugk-ryans-projects-6554e89e.vercel.app/Merry/${name}/false`;
 		} else {
-			longUrlLink = `http:localhost:5173/Merry/${name}/${msg}`;
+			longUrlLink = `https://happy-wishes-yevie3ugk-ryans-projects-6554e89e.vercel.app/Merry/${name}/${msg}`;
 		}
 
 		try {
